@@ -34,6 +34,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="about.html">About</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Model</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -96,31 +99,45 @@
                 <p id="turbidity-value">Loading...</p>
             </div>
             <div class="metric">
+                <h3>Total Dissolved Solids Level</h3>
+                <canvas id="tds-chart"></canvas>
+                <p id="tds-value">Loading...</p>
+            </div>
+            <div class="metric">
+                <h3>Dissolved Oxygen</h3>
+                <canvas id="dissolved-oxygen-chart"></canvas>
+                <p id="dissolved-oxygen-value">Loading...</p>
+            </div>
+            <div class="metric">
                 <h3>Temperature</h3>
                 <canvas id="temperature-chart"></canvas>
                 <p id="temperature-value">Loading...</p>
             </div>
             <div class="metric">
-                <h3>TDS (Total dissolved solids) Level</h3>
-                <canvas id="tds-chart"></canvas>
-                <p id="tds-value">Loading...</p>
+                <h3>Humidity</h3>
+                <canvas id="humidity-chart"></canvas>
+                <p id="humidity-value">Loading...</p>
             </div>
             </section>
 
         <!-- Recent Updates -->
         <section class="updates">
             <h3>Recent Updates</h3>
+            <div class="metric">
             <ul id="update-list">
                 <li>Loading...</li>
             </ul>
+        </div>
         </section>
 
         <!-- Risks and Issues -->
         <section class="risks">
             <h3>Risks and Issues</h3>
+            <div class="metric">
             <ul id="risks-list">
                 <li>Loading...</li>
             </ul>
+        </div>
         </section>
     </div>
 
