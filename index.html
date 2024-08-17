@@ -33,7 +33,23 @@
             <div id="map" style="height: 400px;"></div>
         </section>
         
-
+        <!-- เพิ่มส่วนนี้ใน HTML ของคุณ -->
+        <section class="metrics">
+            <div class="metric">
+                <h3>battery-status</h3>
+                <div id="battery-icon">
+                    <center>
+                    <img src="battery-icon.png" alt="Battery Icon" />
+                    <p id="battery-percentage">98%</p>
+                </center>
+                </div>
+            </div>
+            <div class="metric">
+                <h3>Em Balls</h3>
+                <img src="water_level_icon_154620.png" alt="Em Ball Icon" class="em-ball-icon" />
+                <p id="em-ball-count">75.6 ml</p>
+            </div>
+            </section>
         <!-- Metrics -->
         <section class="metrics">
             <div class="metric">
@@ -51,8 +67,12 @@
                 <canvas id="temperature-chart"></canvas>
                 <p id="temperature-value">Loading...</p>
             </div>
-        </section>
-
+            <div class="metric">
+                <h3>TDS (Total dissolved solids) Level</h3>
+                <canvas id="tds-chart"></canvas>
+                <p id="tds-value">Loading...</p>
+            </div>
+            </section>
 
         <!-- Recent Updates -->
         <section class="updates">
