@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Quality Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+ <!-- Leaflet CSS -->
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+ <!-- Leaflet JavaScript -->
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+ <!-- Your CSS and JS -->
+ <link rel="stylesheet" href="styles.css">
+ <script src="script.js" defer></script>       
+    
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>Water Quality Dashboard</h1>
+        </header>
+
+        <!-- Overview -->
+        <section class="overview">
+            <h2>Current Water Quality</h2>
+            <p> <strong> Model Name:</strong> SWET Engine หมายเลข 1 </p>
+            <p><strong>Location:</strong> Khlong Prawet Buri Rom, Ladkrabang, Bangkok Thailand.</p>
+            <p><strong>Last Updated:</strong> <span id="last-updated">Loading...</span></p>
+        </section>
+
+        <section class="map-section">
+            <h2>Water Quality Monitoring Location</h2>
+            <div id="map" style="height: 400px;"></div>
+        </section>
+        
+
+        <!-- Metrics -->
+        <section class="metrics">
+            <div class="metric">
+                <h3>pH Level</h3>
+                <canvas id="ph-chart"></canvas>
+                <p id="ph-value">Loading...</p>
+            </div>
+            <div class="metric">
+                <h3>Turbidity</h3>
+                <canvas id="turbidity-chart"></canvas>
+                <p id="turbidity-value">Loading...</p>
+            </div>
+            <div class="metric">
+                <h3>Temperature</h3>
+                <canvas id="temperature-chart"></canvas>
+                <p id="temperature-value">Loading...</p>
+            </div>
+        </section>
+
+
+        <!-- Recent Updates -->
+        <section class="updates">
+            <h3>Recent Updates</h3>
+            <ul id="update-list">
+                <li>Loading...</li>
+            </ul>
+        </section>
+
+        <!-- Risks and Issues -->
+        <section class="risks">
+            <h3>Risks and Issues</h3>
+            <ul id="risks-list">
+                <li>Loading...</li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
