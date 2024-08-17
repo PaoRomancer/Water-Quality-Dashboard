@@ -7,11 +7,13 @@ body {
 
 .dashboard {
     max-width: 1200px;
-    margin: auto;
+    margin: 20px auto 0 auto; /* Negative top margin to overlap with navbar */
     padding: 20px;
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative; /* Ensure proper stacking context */
+    z-index: 1; /* Ensure the dashboard stays above the navbar */
 }
 
 .header img {
@@ -166,6 +168,7 @@ p {
 }
 footer {
     background: #333;
+    margin: 20px auto 0 auto; /* Negative top margin to overlap with navbar */
     color: #fff;
     text-align: center;
     padding: 1rem 0;
@@ -193,4 +196,28 @@ footer {
 
 .button:hover {
     background-color: #1565c0;
+}
+/* Navbar Custom Styles */
+.navbar {
+    padding: 10px 20px;
+    background-color: #f8f9fa; /* Light background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+.navbar-brand img {
+    max-height: 70px; /* Adjust to fit your logo size */
+}
+
+.nav-link {
+    font-size: 16px;
+    margin-right: 15px;
+    color: #555; /* Darker text color */
+}
+
+.nav-link:hover {
+    color: #007bff; /* Link hover color */
+}
+
+.navbar-nav {
+    align-items: center; /* Vertically align links */
 }

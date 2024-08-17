@@ -5,27 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Water Quality Dashboard</title>
     <link rel="stylesheet" href="style.css">
- <!-- Leaflet CSS -->
- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
- <!-- Leaflet JavaScript -->
- <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
- <!-- Your CSS and JS -->
- <link rel="stylesheet" href="styles.css">
- <script src="script.js" defer></script>       
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- Your CSS and JS -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>    
     
 </head>
 <body>
+        <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="logo.png" alt="Water Quality Dashboard" width="250" height="auto">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <div class="dashboard">
-        <div class="header img">
+        <!--<div class="header img">
         <header>
             <img src="logo.png" alt="ข้อความอธิบายภาพ" width="600"/>
         </header>
-        </div>
+        </div> -->
 
         <!-- Overview -->
         <section class="overview">
+            <center>
             <h2>Current Water Quality</h2>
+        </center>
             <p> <strong> Model Name:</strong> SWET Engine หมายเลข 1 </p>
             <p><strong>Location:</strong> Khlong Prawet Buri Rom, Ladkrabang, Bangkok Thailand.</p>
             <p><strong>Last Updated:</strong> <span id="last-updated">Loading...</span></p>
@@ -36,11 +60,12 @@
             <h2>Water Quality Monitoring Location</h2>
             </center>
             <div id="map" style="height: 400px;"></div>
+            <div class="container">
+                <a href="map.html" class="button"> ViewMore </a>
+            </div>
         </section>
 
-        <div class="container">
-            <a href="map.html" class="button"> ViewMore </a>
-        </div>
+
         
         <section class="metrics">
             <div class="metric">
@@ -105,6 +130,13 @@
 <p> อยู่ระหว่างการพัฒนา </p>
 <p> Design by PaoRomancer </p>
 <p> (C) 2024 FABLABHWN . All rights reserved.</p>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
 </footer>
 </body>
 </html>
