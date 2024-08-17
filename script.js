@@ -17,19 +17,37 @@ document.addEventListener('DOMContentLoaded', function() {
         ]
     };
 
-    // Initialize the map
-    const map = L.map('map').setView([13.724162, 100.777183], 13); // Coordinates for Bangkok, Thailand
+// Initialize the map
+const map = L.map('map').setView([13.730160, 100.777804], 13); // Coordinates for Bangkok, Thailand
 
-    // Add OpenStreetMap tiles
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
+// Add OpenStreetMap tiles
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
 
-    // Add a marker to the map
-    L.marker([13.724162, 100.777183]).addTo(map)
-        .bindPopup('<b>บริเวณคลองประเวศบุรีรมย์ เขตลาดกระบัง </b><br>Bangkok, Thailand.')
+// Define marker locations
+const locations = [
+    { coords: [13.724162, 100.777183], popup: '<b>คลองประเวศบุรีรมย์ เขตลาดกระบัง</b><br>กรุงเทพมหานคร ประเทศไทย' },
+    { coords: [13.828600, 100.548797], popup: '<b>คลองเปรมประชากร เขตลาดพร้าว</b><br>กรุงเทพมหานคร ประเทศไทย' },
+    { coords: [13.794666, 100.565810], popup: '<b>คลองบางซื่อ เขตจตุจักร</b><br>กรุงเทพมหานคร ประเทศไทย' }, // Added comma here
+    { coords: [13.798559, 100.640130], popup: '<b>คลองตานัง เขตบึงกุ่ม</b><br>กรุงเทพมหานคร ประเทศไทย' },
+    { coords: [13.856233, 100.568729], popup: '<b>คลองบางบัว เขตบางเขน</b><br>กรุงเทพมหานคร ประเทศไทย' },
+    { coords: [13.923485, 100.634873], popup: '<b>คลองสอง เขตสายไหม</b><br>กรุงเทพมหานคร ประเทศไทย' },
+    { coords: [13.764588, 100.622650], popup: '<b>คลองแสนแสบ เขตวังทองหลาง</b><br>กรุงเทพมหานคร ประเทศไทย' },
+    { coords: [13.749279, 100.516927], popup: '<b>คลองผดุงกรุงเกษม เขตพระนคร</b><br>กรุงเทพมหานคร ประเทศไทย' }, // Added comma here
+    { coords: [13.793768, 100.500374], popup: '<b>คลองบางพลัด เขตบางพลัด</b><br>กรุงเทพมหานคร ประเทศไทย' },
+    { coords: [13.834838, 100.523349], popup: '<b>คลองบางเขน เขตจัตุจักร</b><br>กรุงเทพมหานคร ประเทศไทย' },
+    { coords: [13.678343, 100.494950], popup: '<b>คลองบางปะกอก เขตราษฎร์บูรณะ</b><br>กรุงเทพมหานคร ประเทศไทย' },
+
+
+];
+
+// Add markers to the map
+locations.forEach(location => {
+    L.marker(location.coords).addTo(map)
+        .bindPopup(location.popup)
         .openPopup();
-
+});
     // Update last updated time
     document.getElementById('last-updated').textContent = data.lastUpdated;
 
