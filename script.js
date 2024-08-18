@@ -292,4 +292,10 @@ locations.forEach(location => {
         document.getElementById('dissolved-oxygen-value').textContent = `Current Dissolved Oxygen: ${newDissolvedOxygen} mg/L`;
         document.getElementById('humidity-value').textContent = `Current Humidity: ${newHumidity}%`;
     }, 5000); // Update every 5 seconds (you can adjust this timing)
+    document.getElementById('district-select').addEventListener('change', function() {
+        const selectedDistrict = this.value;
+        // Update the metric values based on the selected district
+        // You can fetch the data for the selected district and update the DOM elements accordingly
+    });
+    
 });

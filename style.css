@@ -45,6 +45,19 @@ h2, h3 {
     margin-top: 0;
 }
 
+.data1 {
+    max-width: 100%;
+    height: auto;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.metrictext {
+    text-align: center;
+}
+
 .metrics {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 columns of equal width */
@@ -57,6 +70,34 @@ h2, h3 {
     max-width: 100%;
     height: auto;
     background: #e3f2fd; /* Lighter blue for metric boxes */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.metricred {
+    max-width: 100%;
+    height: auto;
+    background: #fde3e3; /* Lighter blue for metric boxes */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.metricgreen {
+    max-width: 100%;
+    height: auto;
+    background: #e4fde3; /* Lighter blue for metric boxes */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.metricmid {
+    max-width: 100%;
+    height: auto;
+    background: #fdfce3; /* Lighter blue for metric boxes */
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -178,13 +219,31 @@ footer {
 }
 .container {
     text-align: right; /* Aligns all inline elements inside the container to the right */
-    padding: 20px; /* Optional: Add some padding for spacing */
+    padding: 10px; /* Optional: Add some padding for spacing */
+}
+
+.container2 {
+    text-align: right; /* Aligns all inline elements inside the container to the right */
+    padding: 5px; /* Optional: Add some padding for spacing */
 }
 
 .button {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #1e88e5;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button2 {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 12px;
     font-family: Arial, sans-serif;
     color: #fff;
     background-color: #1e88e5;
@@ -220,4 +279,37 @@ footer {
 
 .navbar-nav {
     align-items: center; /* Vertically align links */
+}
+/* Dropdown styling */
+#district-select {
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #007bff;
+    background-color: #ffffff;
+    color: #007bff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#district-select:hover {
+    background-color: #f0f8ff;
+    border-color: #0056b3;
+}
+
+#district-select:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+h2 {
+    text-align: center;
+}
+.boat {
+    position: relative; /* Changed from absolute to relative */
+    max-width: 100%; /* Ensures the image scales within the container */
+    height: auto; /* Maintains the aspect ratio */
+    right: 0; /* Aligns the image to the right */
+    padding: 0;
+
 }

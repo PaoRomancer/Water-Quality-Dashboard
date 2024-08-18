@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Water Quality Dashboard</title>
+    <title>ฺBangkok Map Water Quality Dashboard</title>
     <link rel="stylesheet" href="style.css">
  <!-- Leaflet CSS -->
  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
@@ -33,7 +33,66 @@
                 <a href="index.html" class="button">Dashboard</a>
             </div>
         </section>
+            
+            <section class="data1">
+                <div class="metrictext"> 
+                    <img src="pngwing.com.png" alt="ข้อความอธิบายภาพ" width="300"/>
+                    <h2>Bangkok Water Quality</h2>
+                    </div>
+                <!-- Metrics -->
+                <div class="metrics">
+                    <!--<div style="display: flex; align-items: center;">
+                        <h3 style="margin-right: 10px;"></h3>
+                        <select id="district-select" style="font-size: 16px; padding: 5px;">
+                            <option value="ลาดกระบัง">เขตลาดกระบัง</option>
+                            <option value="ดอนเมือง">เขตดอนเมือง</option>
+                            <option value="หลักสี">เขตหลักสี</option>
+                    </div>-->
 
+                    <div class="metricgreen">
+                        <h3>เขตมีนบุรี</h3>
+                        <p id="ph-value">น้ำเสียเล็กน้อย (Slightly Polluted Water) <h1>😊</h1> </p>
+                        <div class="container2">
+                            <a href="index.html" class="button2">ดูสถานะตัวเครือง</a>
+                        </div>
+                    </div>
+                    <div class="metricred">
+                        <h3>เขตลาดกระบัง</h3>
+                        <p id="turbidity-value"> น้ำเสียรุนแรง (Severely Polluted Water) <h1>💀</h1> </p>
+                        <div class="container2">
+                            <a href="index.html" class="button2">ดูสถานะตัวเครือง</a>
+                        </div>
+                    </div>
+                    <div class="metricgreen">
+                        <h3>เขตยานนาวา</h3>
+                        <p id="tds-value">น้ำเสียเล็กน้อย (Slightly Polluted Water) <h1>😊</h1> </p>
+                        <div class="container2">
+                            <a href="index.html" class="button2">ดูสถานะตัวเครือง</a>
+                        </div>
+                    </div>
+                    <div class="metricmid">
+                        <h3>เขตสัมพันธวงศ์</h3>
+                        <p id="dissolved-oxygen-value">น้ำเสียปานกลาง (Moderately Polluted Water) <h1>🤒</h1> </p>
+                        <div class="container2">
+                            <a href="index.html" class="button2">ดูสถานะตัวเครือง</a>
+                        </div>
+                    </div>
+                    <div class="metricmid">
+                        <h3>เขตพญาไท</h3>
+                        <p id="temperature-value">น้ำเสียปานกลาง (Moderately Polluted Water) <h1>🤒</h1> </p>
+                        <div class="container2">
+                            <a href="index.html" class="button2">ดูสถานะตัวเครือง</a>
+                        </div>
+                    </div>
+                    <div class="metricred">
+                        <h3>เขตธนบุรี</h3>
+                        <p id="humidity-value"> น้ำเสียรุนแรง (Severely Polluted Water) <h1>💀</h1> </p>
+                        <div class="container2">
+                            <a href="index.html" class="button2">ดูสถานะตัวเครือง</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
         
 
